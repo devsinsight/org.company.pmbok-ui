@@ -2,19 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppComponent } from 'app/app.component';
+import { AppRouting, routableComponents } from 'app/app.routing';
+import { CommonService } from 'app/core/services/common.service';
+import './rxjs-extensions';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routableComponents
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgbModule.forRoot(),
+    AppRouting
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
