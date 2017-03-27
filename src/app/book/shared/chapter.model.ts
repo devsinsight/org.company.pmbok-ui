@@ -1,4 +1,4 @@
-export class Chapter{
+export class Chapter {
 constructor(
         id: number,
         name: string,

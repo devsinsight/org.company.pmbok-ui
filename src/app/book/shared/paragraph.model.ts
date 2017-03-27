@@ -1,4 +1,4 @@
-export class Paragraph{
+export class Paragraph {
 constructor(
         id: number,
         sectionId: number,

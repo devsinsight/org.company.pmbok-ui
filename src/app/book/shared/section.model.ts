@@ -1,6 +1,6 @@
 import { Paragraph } from './paragraph.model';
 
-export class Section{
+export class Section {
 constructor(
         id: number,
         chapterId: number,

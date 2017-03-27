@@ -22,5 +22,4 @@ export class ChapterListComponent implements OnInit {
        this.chapters = this.service.getChaptersByBookId(this.bookId);
     });
   }
-
 }

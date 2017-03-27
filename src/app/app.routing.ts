@@ -18,4 +18,4 @@ const router: Routes = [
   exports: [RouterModule]
 })
 export class AppRouting { }
-export const routableComponents = [HomeComponent, AppPageNotFoundComponent]
+export const routableComponents = [HomeComponent, AppPageNotFoundComponent];
