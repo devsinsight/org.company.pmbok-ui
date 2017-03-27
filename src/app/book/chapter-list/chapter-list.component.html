@@ -1,0 +1,12 @@
+<div class="container">
+    <h1 class="display-4">Capítulos</h1>
+
+
+    <div class="card card-outline-primary mb-3 text-center" *ngFor="let chapter of chapters | async">
+        <div class="card-block">
+            <blockquote class="card-blockquote">
+                <a class="nav-link" href="#" [routerLink]="['chapter', chapter.id]">{{chapter.name}}</a>
+            </blockquote>
+        </div>
+    </div>
+</div>

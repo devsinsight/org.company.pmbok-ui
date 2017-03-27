@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptionsArgs } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { environment } from 'app/../environments/environment';
 
 @Injectable()
 export class CommonService {
@@ -9,7 +10,7 @@ export class CommonService {
 
     get(url: string, params?: RequestOptionsArgs) {
         return this.http
-            .get(url, params)
+            .get(environment.apiEndpoint + url, params)
             .map((response: Response) => response.json())
             .catch(this.handleError);
     }
@@ -23,7 +24,7 @@ export class CommonService {
 
     getString(url: string, params?: RequestOptionsArgs) {
         return this.http
-            .get(url, params)
+            .get(environment.apiEndpoint + url, params)
             .map((response: Response) => response)
             .catch(this.handleError);
     }

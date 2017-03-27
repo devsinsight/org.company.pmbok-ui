@@ -1,0 +1,4 @@
+<span *ngFor="let section of sections | async">
+  <h4>{{section.name}}</h4>
+  <p *ngFor="let paragraph of section.paragraphs">{{paragraph.content}}</p>
+</span>
