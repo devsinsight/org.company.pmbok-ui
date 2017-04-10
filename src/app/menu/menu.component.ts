@@ -6,7 +6,7 @@ import { Chapter } from 'app/menu/shared/chapter.model';
 
 
 @Component({
-  selector: 'app-menu',
+  selector: 'div[app-menu]',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
