@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChapterListComponent } from 'app/book/chapter-list/chapter-list.component';
-import { ChapterComponent } from 'app/book/chapter/chapter.component';
+import { BookComponent } from 'app/book/book/book.component';
+import { BookListComponent } from 'app/book/book-list/book-list.component';
 
 const routes: Routes = [
-  { path: '', component: ChapterListComponent },
-  { path: 'chapter/:id', component: ChapterComponent },
+  { path: '', component: BookListComponent, pathMatch: 'full' },
+  { path: ':id', component: BookComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BookRouting {}
+export class BookRouting { }

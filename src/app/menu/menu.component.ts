@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MenuService } from 'app/menu/shared/menu.service';
 import { Observable } from 'rxjs/Observable';
 import { Book } from 'app/menu/shared/book.model';
+import { Chapter } from 'app/menu/shared/chapter.model';
+
 
 @Component({
   selector: 'app-menu',
@@ -11,6 +13,7 @@ import { Book } from 'app/menu/shared/book.model';
 export class MenuComponent implements OnInit {
 
   books: Observable<Book[]>;
+  chapters: Observable<Chapter[]>;
   bookTitle: string;
   bookId: number;
 
@@ -23,7 +26,7 @@ export class MenuComponent implements OnInit {
     this.books = this.service.getBooks();
   }
 
-  changeBook(book) {
+  loadBook(book) {
     this.bookTitle = book.name;
     this.bookId = book.id;
   }

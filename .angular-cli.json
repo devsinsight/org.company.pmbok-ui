@@ -18,13 +18,18 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "app",
         "styles": [
-            "styles.css",
-            "../node_modules/bootstrap/dist/css/bootstrap.css"
+            "../boostbox/assets/css/fonts/font-google.css",
+            "../boostbox/assets/css/theme-default/bootstrap.css",
+            "../boostbox/assets/css/theme-default/boostbox.css",
+            "../boostbox/assets/css/theme-default/boostbox_responsive.css",
+            "../boostbox//assets/css/theme-default/font-awesome.min.css"
         ],
         "scripts": [
-            "../node_modules/jquery/dist/jquery.js",
-            "../node_modules/tether/dist/js/tether.js",
-            "../node_modules/bootstrap/dist/js/bootstrap.js"
+            "../boostbox/assets/js/libs/jquery/jquery-1.11.0.min.js",
+            "../boostbox/assets/js/libs/jquery/jquery-migrate-1.2.1.min.js",
+            "../boostbox/assets/js/core/BootstrapFixed.js",
+            "../boostbox/assets/js/libs/bootstrap/bootstrap.min.js",
+            "../boostbox/assets/js/core/App.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {

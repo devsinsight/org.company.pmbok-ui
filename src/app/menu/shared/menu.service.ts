@@ -6,9 +6,7 @@ export class MenuService {
 
     constructor(private service: CommonService) { }
 
-    getBooks(){
+    getBooks() {
         return this.service.get('book/GetBooks');
     }
-
-
 }

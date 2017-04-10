@@ -1,3 +1,5 @@
+import {Chapter} from 'app/menu/shared/chapter.model';
+
 export class Book {
     constructor(
         id: number,
@@ -5,6 +7,7 @@ export class Book {
         autor: string,
         description: string,
         isEnable: boolean,
-        creationDate: string) { }
+        creationDate: string,
+        chapters: Chapter[]) { }
 
 }

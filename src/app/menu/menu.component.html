@@ -1,3 +1,63 @@
+<div class="sidebar-back">
+</div>
+<div class="sidebar-content">
+    <div class="nav-brand">
+        <a class="main-brand" href="#">
+            <h3 class="text-light text-white"><span>PM<strong>BOK</strong> </span><i class="fa fa-book fa-fw"></i></h3>
+        </a>
+    </div>
+    <form class="sidebar-search" role="search">
+        <a href="javascript:void(0);"><i class="fa fa-search fa-fw search-icon"></i><i class="fa fa-angle-left fa-fw close-icon"></i></a>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control navbar-input" placeholder="Search...">
+                <span class="input-group-btn">
+						<button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+					</span>
+            </div>
+        </div>
+    </form>
+    <ul class="main-menu">
+        <li>
+            <a href="javascript:void(0)" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="'/'">
+                <i class="fa fa-home fa-fw"></i><span class="title">Home</span> <span class="expand-sign">+</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" [routerLinkActive]="['active']" [routerLink]="'/books'">
+                <i class="fa fa-book fa-fw"></i><span class="title">Books</span> <span class="expand-sign">+</span>
+            </a>
+            <ul>
+                <li *ngFor="let book of books | async">
+                    <a href="javascript:void(0)">
+                        <span class="expand-sign">+</span> {{book.name}}
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" [routerLinkActive]="['active']" [routerLink]="['/books', book.id]">
+                                About this book
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <span class="expand-sign">+</span> Chapters
+                            </a>
+                            <ul>
+                                <li *ngFor="let chapter of book.chapters">
+                                    <a href="javascript:void(0)" [routerLinkActive]="['active']" [routerLink]="['/chapters', chapter.id]">
+                                        {{chapter.name}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,3 +86,4 @@
         </ul>
     </div>
 </nav>
+!-->

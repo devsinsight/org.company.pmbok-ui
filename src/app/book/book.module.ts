@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { BookRouting } from 'app/book/book.routing';
-import { ChapterListComponent } from './chapter-list/chapter-list.component';
-import { ChapterComponent } from './chapter/chapter.component';
 import { BookService } from 'app/book/shared/book.service';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookComponent } from './book/book.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    NgbModule,
     BookRouting
   ],
   declarations: [
-    ChapterListComponent,
-    ChapterComponent
-  ],
+    BookListComponent,
+    BookComponent
+],
   providers: [BookService]
 })
 export class BookModule { }

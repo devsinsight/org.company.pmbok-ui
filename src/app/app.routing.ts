@@ -6,7 +6,8 @@ import { AppPageNotFoundComponent } from 'app/app.page-not-found';
 
 const router: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'book/:id', loadChildren: 'app/book/book.module#BookModule' },
+  { path: 'books', loadChildren: 'app/book/book.module#BookModule' },
+  { path: 'chapters', loadChildren: 'app/chapter/chapter.module#ChapterModule' },
   { path: '**', pathMatch: 'full', component: AppPageNotFoundComponent },
 ];
 
