@@ -8,12 +8,14 @@ import { CommonService } from 'app/core/services/common.service';
 import { MenuService } from 'app/menu/shared/menu.service';
 import './rxjs-extensions';
 import { MenuComponent } from './menu/menu.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routableComponents,
-    MenuComponent
+    MenuComponent,
+    NavbarComponent
 ],
   imports: [
     BrowserModule,
